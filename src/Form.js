@@ -3,6 +3,10 @@ import React, { useState } from "react";
 export default function Form(props) {
   const { values, submit } = props;
 
+  const onChange = (event) => {
+    console.log(event);
+  };
+
   return (
     <form className="form-container">
       <div className="form-group inputs">
@@ -12,7 +16,7 @@ export default function Form(props) {
           <input
             type="text"
             name="name"
-            // value={values.name}
+            onChange={onChange}
             placeholder="Type your name"
             maxLength="30"
           />
@@ -24,7 +28,7 @@ export default function Form(props) {
           <input
             type="email"
             name="email"
-            // value={values.email}
+            onChange={onChange}
             placeholder="Enter your e-mail"
             maxLength="30"
           />
